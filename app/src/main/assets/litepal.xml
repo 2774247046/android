@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<litepal>
+    <dbname value="lxs2"></dbname>
+    <version valur="1"></version>
+    <list>
+        <mapping class="com.example.lxs.List.litepal_list.lxs2_Sql"></mapping>
+    </list>
+</litepal>

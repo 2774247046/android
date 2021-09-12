@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">lxs</string>
+    <string name="apple_text">"1、我们可以把列表的元素放在scroll-view控件中，并且让scroll-view实现横向滑动\n
+2、把列表内容项的宽度占满手机宽度，利用rpx特性（自适应屏幕），默认iphon6就是750rpx，只要设置大于等于750rpx就可以。\n
+3、监听滑动后列表操作事件，即可"</string>
+</resources>
