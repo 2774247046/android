@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ViewFlipper
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:inAnimation="@anim/right_in"
+    android:outAnimation="@anim/right_ou"
+    android:flipInterval="3000"
+    android:id="@+id/vflp_help">
+    <include layout="@layout/view_flipper_image1_layout"/>
+    <include layout="@layout/view_flipper_image2_layout"/>
+    <include layout="@layout/view_flipper_image3_layout"/>
+</ViewFlipper>
+</LinearLayout>
