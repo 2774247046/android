@@ -7,7 +7,9 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -46,7 +48,6 @@ public class WebView_Main extends AppCompatActivity {
         setContentView(R.layout.web_view_main);
         Button button=findViewById(R.id.WebView_button);
         textView=findViewById(R.id.WebView_text);
-        ImageView img_view=findViewById(R.id.Wed_view_img);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,28 +57,28 @@ public class WebView_Main extends AppCompatActivity {
         });
     }
     private void sendRequestWithHttpURL(){
+        Log.e("进入线程","0");
         BlockingQueue<Runnable> blockingQueue=new LinkedBlockingQueue<>();
-        ExecutorService executorService=new ThreadPoolExecutor(Runtime.getRuntime().availableProcessors(),
-                Runtime.getRuntime().availableProcessors()*2,1, TimeUnit.SECONDS,blockingQueue);
-        executorService.execute(new Runnable() {
+        ExecutorService service=new ThreadPoolExecutor(1,1,1,TimeUnit.MINUTES,blockingQueue);
+        service.execute(new Runnable() {
             @Override
             public void run() {
                 HttpURLConnection connection=null;
                 BufferedReader reader=null;
                 try {
-                    URL url=new URL("https://square.github.io/okhttp/");
+                    URL url=new URL("https://www.baidu.com/");
                     connection=(HttpURLConnection)url.openConnection();
                     connection.setRequestMethod("GET");
-                    connection.setConnectTimeout(1000);
-                    connection.setReadTimeout(1000);
+                    connection.setConnectTimeout(8000);
+                    connection.setReadTimeout(8000);
                     InputStream in=connection.getInputStream();
                     reader=new BufferedReader(new InputStreamReader(in));
-                    StringBuilder stringBuilder=new StringBuilder();
+                    StringBuilder buffer=new StringBuilder();
                     String hh;
-                    while ((hh=reader.readLine())!=null){
-                        stringBuilder.append(hh);
+                    while ((hh = reader.readLine())!=null){
+                        buffer.append(hh);
                     }
-                    showResponse(stringBuilder.toString());
+                    showResponse(buffer.toString());
                 }catch (Exception e){
                     e.printStackTrace();
                 }finally {
@@ -90,7 +91,6 @@ public class WebView_Main extends AppCompatActivity {
                         if (connection!=null){
                             connection.disconnect();
                         }
-                        executorService.shutdown();
                     }
                 }
             }

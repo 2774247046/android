@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.lxs.LstView_delete.List_delete xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/listView_content"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView_img"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:id="@+id/listView_menu"
+        android:text="删除"
+        android:background="#ad0027"
+        android:gravity="center_horizontal"
+        android:textSize="25dp"
+        android:padding="8dp"/>
+</com.example.lxs.LstView_delete.List_delete>

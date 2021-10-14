@@ -1,5 +1,6 @@
 package com.example.lxs;
-
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +22,6 @@ import com.example.lxs.List.lxs1_list;
 
 import java.util.ArrayList;
 import java.util.List;
-
 public class lxs1 extends AppCompatActivity {
     private List<lxs1_list>list=new ArrayList<lxs1_list>();
     @Override
@@ -49,7 +49,26 @@ public class lxs1 extends AppCompatActivity {
         @Override
         public GG onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.lxs_text_img_buju,parent,false);
-            return new GG(view);
+            GG gg=new GG(view);
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int a=gg.getAbsoluteAdapterPosition();
+                    lxs1_list o=listt.get(a);
+                   new AlertDialog.Builder(lxs1.this)
+                           .setTitle(o.getText())
+                           .setIcon(o.getImg())
+                           .setMessage("这是一个最普通的AlertDialog,\n带有三个按钮，分别是取消，中立和确定")
+                           .setNeutralButton("6", new DialogInterface.OnClickListener() {
+                               @Override
+                               public void onClick(DialogInterface dialog, int which) {
+
+                               }
+                           })
+                            .show();
+                }
+            });
+            return gg;
         }
         @Override
         public void onBindViewHolder(@NonNull GG holder, int position) {

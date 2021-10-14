@@ -39,6 +39,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.security.Provider;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class xiangchen extends AppCompatActivity {
@@ -59,6 +61,7 @@ public class xiangchen extends AppCompatActivity {
             public void onClick(View v) {
                 Random random=new Random();
                 int a=random.nextInt(9)*5;
+                Log.d("a", String.valueOf(a));
                 File file=new File(getExternalCacheDir(),a+".img");
                 try {
                 if (file.exists()) {
@@ -75,14 +78,16 @@ public class xiangchen extends AppCompatActivity {
                 }
                 Intent intent=new Intent("android.media.action.IMAGE_CAPTURE");
                 intent.putExtra(MediaStore.EXTRA_OUTPUT,uri_1);
-                startActivityForResult(intent,3);
+                startActivityForResult(intent,1);
             }
         });
         sxt_btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                List<String> list=new ArrayList<>();
                 if (ContextCompat.checkSelfPermission(xiangchen.this,Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
                     ActivityCompat.requestPermissions(xiangchen.this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
+                    list.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
                 }else{
                     openAlbum();
                 }
@@ -100,7 +105,11 @@ public class xiangchen extends AppCompatActivity {
         switch (requestCode){
             case 1:
                 if (grantResults.length>0&&grantResults[0]==PackageManager.PERMISSION_GRANTED){
-                    openAlbum();
+                    for (int a:grantResults){
+                        if (a==PackageManager.PERMISSION_GRANTED){
+                            openAlbum();
+                        }
+                    }
                 }else{
                     Toast.makeText(xiangchen.this,"失败",Toast.LENGTH_SHORT).show();
                 }
@@ -120,7 +129,7 @@ public class xiangchen extends AppCompatActivity {
                  }
                 }
                 break;
-            case 3:
+            case 1:
                 if (resultCode==RESULT_OK){
                     if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.KITKAT){
                         try {
@@ -146,6 +155,7 @@ public class xiangchen extends AppCompatActivity {
             if ("com.android.providers.media.documents".equalsIgnoreCase(uri.getAuthority())){
                 String id=docId.split(":")[1];
                 String select=MediaStore.Images.Media._ID+"="+id;
+                Log.d("id",id);
                 imagePath=getImagePath(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,select);
             }else if ("com.android.providers.downloads.documents".equalsIgnoreCase(uri.getAuthority())){
                 Uri uri1=ContentUris.withAppendedId(Uri.parse("content//downloads/public_downloads"),Long.parseLong(docId));

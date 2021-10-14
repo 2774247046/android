@@ -1,5 +1,6 @@
 package com.example.lxs.WebView;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.lxs.R;
 
+import java.io.IOException;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.ExecutionException;
@@ -39,43 +41,26 @@ public class Web_View_mian2 extends AppCompatActivity {
         });
     }
     private void  RequestOKHttp(){
-        BlockingQueue<Runnable>blockingQueue=new LinkedBlockingQueue<>();
-        ExecutorService executorService=new ThreadPoolExecutor(Runtime.getRuntime().availableProcessors(),
-                Runtime.getRuntime().availableProcessors()*2,1,TimeUnit.MINUTES,blockingQueue);
-        executorService.execute(new Runnable() {
-            @Override
-            public void run() {
-                Request request;
-                Response response=null;
-                OkHttpClient client=null;
-                try {
-                    client=new OkHttpClient();
-                    request=new Request.Builder()
-                            .url("https://square.github.io/okhttp/")
-                            .build();
-                    response=client.newCall(request).execute();
-                    String hh=response.body().string();
-                    TextResponse(hh);
-                }catch (Exception e){
-                    e.printStackTrace();
-                }finally {
-                    if (response!=null){
-                        response.close();
-                    }
-                    if (client!=null){
-                        client.dispatcher();
-                    }
-                    executorService.shutdown();
-                }
-            }
-        });
+    BlockingQueue<Runnable>blockingQueue=new LinkedBlockingQueue<>();
+    ExecutorService service=new ThreadPoolExecutor(Runtime.getRuntime().availableProcessors(),
+            Runtime.getRuntime().availableProcessors()*2, 1,TimeUnit.SECONDS,blockingQueue);
+    service.execute(() -> {
+        OkHttpClient okHttpClient=new OkHttpClient();
+        Request request=new Request.Builder()
+                .url("https://www.baidu.com/")
+                .build();
+        try {
+            Response response=okHttpClient.newCall(request).execute();
+            String hh=response.body().string();
+            TextResponse(hh);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    });
     }
     private void TextResponse(final String text){
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
+        runOnUiThread(()-> {
                 textView.setText(text);
-            }
         });
     }
 }
