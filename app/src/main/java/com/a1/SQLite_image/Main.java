@@ -44,14 +44,13 @@ public class Main extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.a1_button_All:
-                String []name={"第二张图片"};
+                String []name={"第1张图片"};
                 Cursor cursor=sqLite.All(name);
                 if (cursor!=null){
                     if (cursor.moveToFirst()){
                         do {
                             byte []i=cursor.getBlob(cursor.getColumnIndex("image"));
                             Bitmap bitmap=BitmapFactory.decodeByteArray(i,0,i.length);
-                            Log.d("bitmap",bitmap+"");
                             image.setImageBitmap(bitmap);
                             image_1.setImageBitmap(bitmap);
                             image_2.setImageBitmap(bitmap);
@@ -60,11 +59,10 @@ public class Main extends AppCompatActivity implements View.OnClickListener{
                 }
                 break;
             case R.id.a1_button_delete:
-
                 break;
             case R.id.a1_button_add:
-                String []a={"第一张图片","5"};
-                sqLite.Add(bitmapToBytes(R.drawable.th1),a);
+                String []a={"第1张图片","6"};
+                sqLite.Add(bitmapToBytes(R.drawable.th4),a);
                 break;
         }
     }
@@ -72,6 +70,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener{
         ByteArrayOutputStream outputStream=new ByteArrayOutputStream();
         Bitmap bitmap= BitmapFactory.decodeResource(getResources(),image_id);
         bitmap.compress(Bitmap.CompressFormat.PNG,100,outputStream);
+        Log.d("a",outputStream.size()+"");
         return outputStream.toByteArray();
     }
 }

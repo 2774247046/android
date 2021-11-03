@@ -9,31 +9,50 @@
         <entry key="..\:/Android/lxs/app/src/main/res/drawable/ic_launcher_background.xml" value="0.33177083333333335" />
         <entry key="..\:/Android/lxs/app/src/main/res/drawable/yuajiao.xml" value="0.3541666666666667" />
         <entry key="..\:/Android/lxs/app/src/main/res/drawable/yuajiao2.xml" value="0.33177083333333335" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/a1_main.xml" value="0.2817028985507246" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/activity_main.xml" value="0.3129528985507246" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/alertdialog_layout.xml" value="0.23777173913043478" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/apple_dialog.xml" value="0.2418478260869565" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/apple_qq_dialog.xml" value="0.25679347826086957" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/bar_chart_layout.xml" value="0.125" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/bnt_huangdo.xml" value="0.2427536231884058" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/button.xml" value="0.21875" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/darwer_layout_lxs_layout.xml" value="0.23505434782608695" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/datadialog_layout.xml" value="0.2" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/datedialog_layout.xml" value="0.21655405405405406" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/dialog.xml" value="0.25679347826086957" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/download_layout.xml" value="0.302536231884058" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/fragment_item.xml" value="0.2967592592592593" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/gogao.xml" value="0.297554347826087" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/grid_view_item.xml" value="0.2967592592592593" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/gridview_layout.xml" value="0.26313405797101447" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/gridview_text_img.xml" value="0.26313405797101447" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/line_chart_layout.xml" value="0.125" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/list_view_layout.xml" value="0.2967592592592593" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/listview_delect_lstview.xml" value="0.19" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/listview_delete_content.xml" value="0.2776268115942029" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/listview_item_layout.xml" value="0.2967592592592593" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/lxs1.xml" value="0.297554347826087" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/lxs_conten.xml" value="0.27760416666666665" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/lxs_text_img_buju.xml" value="0.3067708333333333" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/main_fragment.xml" value="0.2967592592592593" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/main_xml_layout.xml" value="0.2259963768115942" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/maintozhi.xml" value="0.23550724637681159" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/menu.xml" value="0.3338541666666667" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/meun.xml" value="0.2749094202898551" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/minu_class_item.xml" value="0.14423942394239425" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/minute_class_layout.xml" value="0.25" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/minute_gridview_item.xml" value="0.2967592592592593" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/mp_layout.xml" value="0.29981884057971014" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/my_viewpage_layout.xml" value="0.17889492753623187" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/navigation_2.xml" value="0.25" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/navigationview.xml" value="0.2717391304347826" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/pie_layout.xml" value="0.22056159420289856" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/player_layout.xml" value="0.3067708333333333" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/popup_button_layout.xml" value="0.3067708333333333" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/renew_ui_layout.xml" value="0.3067708333333333" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/scroll_fragmnrt_layout.xml" value="0.2967592592592593" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/scroll_toolbar_layout.xml" value="0.2" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/service.xml" value="0.29257246376811596" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/service_layout.xml" value="0.1479156202913109" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/sqlite.xml" value="0.12239583333333333" />
@@ -45,6 +64,7 @@
         <entry key="..\:/Android/lxs/app/src/main/res/layout/view_flipper_image2_layout.xml" value="0.27853260869565216" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/view_flipper_image3_layout.xml" value="0.27853260869565216" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/view_flipper_layout.xml" value="0.23958333333333334" />
+        <entry key="..\:/Android/lxs/app/src/main/res/layout/view_pager_item.xml" value="0.2967592592592593" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/w_paint_layour.xml" value="0.254981884057971" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/w_paint_layout.xml" value="0.16621376811594202" />
         <entry key="..\:/Android/lxs/app/src/main/res/layout/web_view_main.xml" value="0.2427536231884058" />

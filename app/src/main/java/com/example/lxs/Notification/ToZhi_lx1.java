@@ -43,7 +43,7 @@ public class ToZhi_lx1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
              Intent intent=new Intent(ToZhi_lx1.this,lxs1.class);
-             PendingIntent pi=PendingIntent.getActivity(ToZhi_lx1.this,1,intent,0);
+             PendingIntent pi=PendingIntent.getActivity(ToZhi_lx1.this,0,intent,0);
              Notification notification=new NotificationCompat.Builder(ToZhi_lx1.this,"001")
                      .setStyle(new NotificationCompat.BigTextStyle().bigText("\n" +
                              "public class ToZhi_lx1 extends AppCompatActivity {\n" +
@@ -74,7 +74,7 @@ public class ToZhi_lx1 extends AppCompatActivity {
                      .build();
              NotificationManager manager=(NotificationManager)getSystemService(NOTIFICATION_SERVICE);
              if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
-                 NotificationChannel channel=new NotificationChannel("1","测试",NotificationManager.IMPORTANCE_HIGH);
+                 NotificationChannel channel=new NotificationChannel("001","测试",NotificationManager.IMPORTANCE_HIGH);
                  channel.setSound(Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE+"://"+getPackageName()+"/"+R.raw.feint_stray),Notification.AUDIO_ATTRIBUTES_DEFAULT);
                  Log.d("5", String.valueOf(channel.getSound()));
                  manager.createNotificationChannel(channel);

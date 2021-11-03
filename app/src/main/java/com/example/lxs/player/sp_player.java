@@ -2,6 +2,7 @@ package com.example.lxs.player;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -44,8 +45,17 @@ public class sp_player extends AppCompatActivity implements View.OnClickListener
         }
     }
     private void initMediaPlayer(){
-        File file=new File(Environment.getExternalStorageDirectory(),"Documents/1545582900.mp4");
-        view.setVideoPath(file.getPath());
+//        File file=new File(Environment.getExternalStorageDirectory(),"Documents/1545582900.mp4");
+        Uri uri=Uri.parse
+        ("http://v5-h.douyinvod.com" +
+                "/68f004382b2c5abfe7fcb9d249619475/617b61b6/" +
+                "video/tos/cn/tos-cn-ve-15/974b864989e74fa4bb2b95786c" +
+                "b372a4/?a=1128&br=1244&bt=1244&cd=0%7C0%7C0&ch=0&cr=0&cs=0" +
+                "&cv=1&dr=0&ds=3&er=&ft=OR_LrKZZI02K1iTz7Th94ictRsWd.lK2_68&l=20211" +
+                "029094708010212197134462E8EAC&lr=xigua_aweme_play_suffix&mime_type=video" +
+                "_mp4&net=0&pl=0&qs=0&rc=amtvdmk6Zmc6NzMzNGkzM0ApO2c2OmVlNGQ8Nzw5OTk2NGcpaGRqbGRoaGRmYX" +
+                "NrNnI0Xy0yYC0tZC0vc3MuLTZiLjU2MmIxYGEwMWMzOmNwb2wrbStqdDo%3D&vl=&vr=");
+        view.setVideoURI(uri);
     }
     @Override
     public void onClick(View v) {

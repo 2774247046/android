@@ -88,10 +88,6 @@ public class MainToZhi extends AppCompatActivity{
                     if (android.os.Build.VERSION.SDK_INT>=android.os.Build.VERSION_CODES.O){
 //                        通知渠道 需要传入 通知设置的id name自己设置 后面这个是设置通知的 重要性
                         NotificationChannel notificationChannel=new NotificationChannel("001","测试",NotificationManager.IMPORTANCE_HIGH);
-                        AudioAttributes audioAttributes = new AudioAttributes.Builder()
-                                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                                .setUsage(AudioAttributes.USAGE_NOTIFICATION)
-                                .build();
 notificationChannel.setSound(Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE+"://"+getPackageName()+"/"+R.raw.feint_stray),Notification.AUDIO_ATTRIBUTES_DEFAULT);
 //                        下面这个方法也可以
 //                        notificationChannel.setSound(Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE+"://"+getPackageName() + "/"+R.raw.feint_stray),audioAttributes);

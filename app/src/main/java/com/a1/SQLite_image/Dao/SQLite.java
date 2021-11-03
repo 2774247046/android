@@ -7,12 +7,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 public class SQLite extends SQLiteOpenHelper{
     public SQLite(@Nullable Context context){
-        super(context, "image.db", null, 4);
+        super(context, "image.db", null, 6);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table a(" +
-                "image BLOB," +
+                "image longblob," +
                 "name varchar," +
                 "id Integer)");
     }

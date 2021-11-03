@@ -18,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lxs">
         <activity
-            android:name="com.a1.SQLite_image.Main"
+            android:name="com.pyq.Main_PYQ"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +28,7 @@
         <activity android:name=".Button1"/>
         <activity android:name=".Intent.A1"/>
         <activity android:name=".lxs1" />
+        <activity android:name="com.pyq.MyViewpage_Main"/>
         <provider
             android:authorities="com.example.lxs.fileprovider"
             android:name="androidx.core.content.FileProvider"
