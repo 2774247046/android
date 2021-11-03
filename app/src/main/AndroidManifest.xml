@@ -18,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lxs">
         <activity
-            android:name="com.pyq.Main_PYQ"
+            android:name="com.toolbar.Scroll_toolbar"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
